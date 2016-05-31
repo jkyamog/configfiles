@@ -6,6 +6,8 @@ brew upgrade
 # install brew-cask and java early, as dependencies on others
 brew install caskroom/cask/brew-cask
 
+brew tap homebrew/services
+
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 brew install bash
 brew install bash-completion
@@ -36,9 +38,15 @@ brew install reattach-to-user-namespace
 brew install vim
 brew install z
 
+# useful user apps
 brew cask install dockertoolbox
 brew cask install google-chrome
 brew cask install virtualbox
+brew cask install dropbox
+brew cask install keepassx
+brew cask install vmware-horizon-client
+brew cask install flux
+brew cask install google-drive
 
 # Remove outdated versions from the cellar.
 brew cleanup

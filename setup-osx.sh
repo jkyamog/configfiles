@@ -177,6 +177,9 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
+# Use function keys
+defaults write com.apple.keyboard.fnState -bool true
+
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
@@ -231,6 +234,8 @@ defaults write com.apple.finder QuitMenuItem -bool true
 # For other paths, use `PfLo` and `file:///full/path/here/`
 #defaults write com.apple.finder NewWindowTarget -string "PfDe"
 #defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 
 # Show icons for hard drives, servers, and removable media on the desktop
 #defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -348,7 +353,7 @@ defaults write com.apple.dock tilesize -int 36
 #defaults write com.apple.dock mineffect -string "scale"
 
 # Minimize windows into their application’s icon
-defaults write com.apple.dock minimize-to-application -bool true
+#defaults write com.apple.dock minimize-to-application -bool true
 
 # Enable spring loading for all Dock items
 #defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true

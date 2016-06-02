@@ -5,8 +5,8 @@
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -73,6 +73,8 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/brew
   zgen oh-my-zsh plugins/brew-cask
   zgen oh-my-zsh themes/$ZSH_THEME
+
+  zgen load kubernetes/kubernetes contrib/completions/zsh/kubectl
 
   # completions
   zgen load zsh-users/zsh-completions src

@@ -8,6 +8,9 @@ brew install caskroom/cask/brew-cask
 
 brew tap homebrew/services
 
+brew tap tldr-pages/tldr
+brew install tldr
+
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 brew install bash
 brew install bash-completion

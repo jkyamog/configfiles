@@ -200,7 +200,7 @@ sudo pmset -c sleep 0
 sudo pmset -b sleep 15
 
 # Set low power mode on battery
-sudo pmset -b lowpowermode 1
+#sudo pmset -b lowpowermode 1
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
@@ -267,7 +267,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desk
 #defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show hidden files by default
-#defaults write com.apple.finder AppleShowAllFiles -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
 
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -458,8 +458,21 @@ defaults write com.apple.dock autohide -bool true
 #defaults write com.apple.dock wvous-tr-corner -int 4
 #defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Start screen saver
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 5
+#defaults write com.apple.dock wvous-bl-corner -int 5
+#defaults write com.apple.dock wvous-bl-modifier -int 5
+# Bottom right screen corner → Start screen saver
+defaults write com.apple.dock wvous-br-corner -int 5
+defaults write com.apple.dock wvous-br-modifier -int 5
+defaults write com.apple.dock wvous-bl-corner -int 0
+defaults write com.apple.dock wvous-bl-modifier -int 0
+
+###############################################################################
+# Window Manager                                                              #
+###############################################################################
+
+# Turn off margin when tiling
+defaults write com.apple.WindowManager EnableTiledWindowMargins 0
+
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################

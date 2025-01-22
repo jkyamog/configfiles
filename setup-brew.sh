@@ -7,8 +7,8 @@ brew upgrade
 brew services
 
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-brew install bash
-brew install bash-completion
+# brew install bash
+# brew install bash-completion
 # brew install zsh # macos sanoma includes current version 
 brew install zsh-completions 
 
@@ -28,13 +28,13 @@ brew install tig
 
 # dev stuff
 # brew install mongodb
- #brew install nginx
+# brew install nginx
 brew install npm
 # brew install pcre             # perl regex
 # brew install ssh-copy-id
 # brew install tmux
 # brew install reattach-to-user-namespace
-brew install python
+# brew install python
 
 # useful utils
 # brew install vim # macos sanoma includes current version
@@ -50,7 +50,9 @@ sudo softwareupdate --install-rosetta
 brew install visual-studio-code
 brew install lm-studio 
 brew install microsoft-edge
-brew install lg-onscreen-control
+# brew install lg-onscreen-control
+brew install betterdisplay
+brew install podman-desktop
 
 # Remove outdated versions from the cellar.
 brew cleanup

@@ -3,56 +3,45 @@
 brew update
 brew upgrade
 
-# install brew-cask and java early, as dependencies on others
-brew services
+# Shell utilities
+brew install zsh-completions
+brew install gnu-sed
+brew install watch
 
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# brew install bash
-# brew install bash-completion
-# brew install zsh # macos sanoma includes current version 
-brew install zsh-completions 
-
-brew install gnu-sed # override built-in sed, fix on path
-
-# git
+# Git tools
 brew install git
+brew install git-lfs
 brew install tig
 
-# jvm stuff
-# brew cask install java
-# brew install leiningen
-# brew install maven
-# brew install sbt
+# Python environment
+brew install python
+brew install uv
 
-# node
+# Install miniforge
+brew install --cask miniforge
 
-# dev stuff
-# brew install mongodb
-# brew install nginx
-brew install npm
-# brew install pcre             # perl regex
-# brew install ssh-copy-id
-# brew install tmux
-# brew install reattach-to-user-namespace
-# brew install python
+# Node.js
+brew install node
 
-# useful utils
-# brew install vim # macos sanoma includes current version
-# brew install z
+# Terminal utilities
 brew install bat
 brew install jq
+brew install smartmontools
 
-# some apps still need rosetta 2
+# Some apps still need rosetta 2
 sudo softwareupdate --install-rosetta
 
-# useful user apps
-# brew install google-drive
-brew install visual-studio-code
-brew install lm-studio 
-brew install microsoft-edge
-# brew install lg-onscreen-control
-brew install betterdisplay
-brew install podman-desktop
+# Applications
+brew install --cask visual-studio-code
+# brew install --cask cursor
+brew install --cask microsoft-edge
+brew install --cask betterdisplay
 
-# Remove outdated versions from the cellar.
+# Conditional install for M4 Max only
+if [[ $(sysctl -n machdep.cpu.brand_string) == *"M4 Max"* ]]; then
+  brew install ollama
+  brew install --cask lm-studio 
+fi
+
+# Remove outdated versions from the cellar
 brew cleanup

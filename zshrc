@@ -76,6 +76,7 @@ plugins=(
 	macos
 	sudo
 	command-not-found
+	history
 )
 
 source $ZSH/oh-my-zsh.sh

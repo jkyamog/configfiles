@@ -32,10 +32,12 @@ brew install smartmontools
 sudo softwareupdate --install-rosetta
 
 # Applications
+brew install --cask docker
 brew install --cask visual-studio-code
 # brew install --cask cursor
 brew install --cask microsoft-edge
 brew install --cask betterdisplay
+
 
 # Conditional install for M4 Max only
 if [[ $(sysctl -n machdep.cpu.brand_string) == *"M4 Max"* ]]; then
